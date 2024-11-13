@@ -1,8 +1,20 @@
+#ifndef CARD_H
+#define CARD_H
+
 #include <string>
 
-class Card{
-public: 
+class Card {
+public:
     std::string cardName;
 
-    virtual void displayInfo() = 0;
+    
+    Card() : cardName("Default Name") {}  
+    
+    
+    Card(const std::string& name) : cardName(name) {}
+
+    
+    virtual void displayInfo() const = 0;
 };
+
+#endif // CARD_H
