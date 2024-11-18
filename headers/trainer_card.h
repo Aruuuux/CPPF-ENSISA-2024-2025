@@ -1,10 +1,10 @@
 #ifndef TRAINERCARD_H
 #define TRAINERCARD_H
 
-#include "Card.h"
-#include "PokemonCard.h"
+#include "card.h"
+#include "pokemon_card.h"
 #include <string>
-#include <iostream> // Add missing import
+#include <iostream>
 
 class TrainerCard : public Card {
     protected:
@@ -25,7 +25,7 @@ class TrainerCard : public Card {
         void applyEffect(std::vector<PokemonCard>& activePokemons) const { 
             if (TrainerEffect == "heal all your action pokemon") { 
                 for (auto& pokemon : activePokemons) {
-                    pokemon.hp = pokemon.maxHP; //heal all pokemon to max hp
+                    pokemon.hp = pokemon.maxHP; 
                 }
             }
         }; 

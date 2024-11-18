@@ -1,4 +1,4 @@
-#include "TrainerCard.h"
+#include "headers/trainer_card.h"
 
 
 void TrainerCard::displayInfo() const {
