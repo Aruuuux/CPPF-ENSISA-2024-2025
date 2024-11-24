@@ -1,0 +1,66 @@
+output : 
+Player 1 Bench and Actions:
+Bench Cards for Player Hadi:
+Pokemon: Pikachu (Level 1)
+Type: Electric
+HP: 100/100
+Attacks:
+  Attack #1: Thunder Shock (Cost: 1, Damage: 30)
+  Attack #2: Thunder Bolt (Cost: 2, Damage: 50)
+Trainer card effect: heal all your action pokemon
+
+Action Cards:
+Pokemon: Pikachu (Level 1)
+Type: Electric
+HP: 100/100
+Attacks:
+  Attack #1: Thunder Shock (Cost: 1, Damage: 30)
+  Attack #2: Thunder Bolt (Cost: 2, Damage: 50)
+Player 2 Bench and Actions:
+Bench Cards for Player Germain:
+Trainer card effect: heal all your action pokemon
+Pokemon: Bulbasaur (Level 1)
+Type: Grass
+HP: 100/100
+Attacks:
+  Attack #1: Leech Seed (Cost: 1, Damage: 15)
+  Attack #2: Vine Whip (Cost: 2, Damage: 25)
+
+Action Cards:
+Pokemon: Bulbasaur (Level 1)
+Type: Grass
+HP: 100/100
+Attacks:
+  Attack #1: Leech Seed (Cost: 1, Damage: 15)
+  Attack #2: Vine Whip (Cost: 2, Damage: 25)
+
+Player 1 attacks Player 2:
+Bulbasaur took 20 damage! Remaining HP: 80
+Pikachu attacks Bulbasaur with Thunder Bolt for 20 damage!
+
+Action Cards:
+Action Cards:
+Pokemon: Bulbasaur (Level 1)
+Type: Grass
+HP: 80/100
+Attacks:
+  Attack #1: Leech Seed (Cost: 1, Damage: 15)
+  Attack #2: Vine Whip (Cost: 2, Damage: 25)
+
+After using Trainer Card (Brock):
+Bulbasaur has been healed to full HP (100 HP)!
+Action Cards:
+Action Cards:
+Pokemon: Bulbasaur (Level 1)
+Type: Grass
+HP: 100/100
+Attacks:
+  Attack #1: Leech Seed (Cost: 1, Damage: 15)
+  Attack #2: Vine Whip (Cost: 2, Damage: 25)
+
+============== Compilation ==============
+utiliser :
+    g++ -std=c++17 -I./headers main.cpp pokemon_card.cpp energy_card.cpp player.cpp trainer_card.cpp -o game
+
+Puis : 
+    ./game

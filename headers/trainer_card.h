@@ -1,34 +1,26 @@
 #ifndef TRAINERCARD_H
 #define TRAINERCARD_H
 
-#include "card.h"
-#include "pokemon_card.h"
 #include <string>
 #include <iostream>
+#include <vector>
+#include "card.h"
+#include "pokemon_card.h"
 
 class TrainerCard : public Card {
-    protected:
-        std::string TrainerEffect;
+protected:
+    std::string TrainerEffect;  // Uniquement l'effet de la carte
 
-    public:
-        TrainerCard(const std::string& name, const std::string& effect){ 
-            cardName = name;
-            TrainerEffect = effect;
-        };
+public:
+    // Constructeur par défaut sans nom
+    TrainerCard();  // Ajout du constructeur par défaut
 
-        void displayInfo() const{
-            std::cout << "Name: " << cardName << std::endl;
-            std::cout << "Trainer Effect: " << TrainerEffect << std::endl;
-        };
+    // Constructeur avec effet
+    TrainerCard(const std::string& effect);
 
-
-        void applyEffect(std::vector<PokemonCard>& activePokemons) const { 
-            if (TrainerEffect == "heal all your action pokemon") { 
-                for (auto& pokemon : activePokemons) {
-                    pokemon.hp = pokemon.maxHP; 
-                }
-            }
-        }; 
-
+    void displayInfo() const override;  // Affiche les informations de la carte
+    void applyEffect(std::vector<PokemonCard>& activePokemons) const;  // Applique l'effet
+    std::string getEffect() const override;  // Retourne l'effet de la carte
 };
+
 #endif // TRAINERCARD_H

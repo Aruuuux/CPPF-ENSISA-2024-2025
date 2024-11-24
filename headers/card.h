@@ -2,16 +2,17 @@
 #define CARD_H
 
 #include <string>
+#include <tuple>
 
 class Card {
-public:
+protected:
     std::string cardName;
 
-    Card() : cardName("Default Name") {}
-
-    Card(const std::string& name) : cardName(name) {}
-
-    virtual void displayInfo() const = 0; 
+public:
+    // Déclaration d'une méthode virtuelle pure
+    virtual void displayInfo() const = 0; // Pure virtual function
+    virtual std::string getEffect() const { return ""; }  // Méthode par défaut qui retourne une chaîne vide
+    virtual ~Card() = default;  // Destructeur virtuel pour assurer la destruction correcte des objets dérivés
 };
 
-#endif 
+#endif // CARD_H
